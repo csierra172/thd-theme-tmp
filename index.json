@@ -1,0 +1,182 @@
+{
+  "sections": {
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "drop-5",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "show_tile_background": false,
+        "tile_background": "theme",
+        "tile_opacity": 35,
+        "tile_blur": 8,
+        "show_tile_border": false,
+        "tile_border_color": "#ffffff",
+        "tile_border_opacity": 15,
+        "tile_border_width": 1,
+        "tile_border_radius": 16,
+        "show_tile_shadow": false,
+        "tile_shadow_opacity": 20,
+        "tile_shadow_vertical": 8,
+        "tile_shadow_blur": 24,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "quick_add_style": "list",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ugc": {
+      "type": "ugc-home",
+      "blocks": {
+        "photo_0": {
+          "type": "photo",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-cut-usa.webp?v=1782108172",
+            "link": "/products/usa",
+            "alt": "USA trucker hat"
+          }
+        },
+        "photo_1": {
+          "type": "photo",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-cut-brazil.webp?v=1782108119",
+            "link": "/products/brazil",
+            "alt": "Brazil trucker hat"
+          }
+        },
+        "photo_2": {
+          "type": "photo",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-cut-argentina.webp?v=1782108097",
+            "link": "/products/argentina",
+            "alt": "Argentina trucker hat"
+          }
+        },
+        "photo_3": {
+          "type": "photo",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-cut-mexico.webp?v=1782108132",
+            "link": "/products/mexico",
+            "alt": "Mexico trucker hat"
+          }
+        },
+        "photo_4": {
+          "type": "photo",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-cut-france.webp?v=1782108306",
+            "link": "/products/france",
+            "alt": "France trucker hat"
+          }
+        },
+        "photo_5": {
+          "type": "photo",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-cut-portugal.webp?v=1782108519",
+            "link": "/products/portugal",
+            "alt": "Portugal trucker hat"
+          }
+        }
+      },
+      "block_order": [
+        "photo_0",
+        "photo_1",
+        "photo_2",
+        "photo_3",
+        "photo_4",
+        "photo_5"
+      ],
+      "settings": {
+        "heading": "SEEN ON THE DEALERS",
+        "subheading": "Real people. Real drops.",
+        "cta_label": "Tag @thehatdealers to be featured",
+        "cta_link": "https://www.instagram.com/thehatdealers/",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "faq": {
+      "type": "faq-home",
+      "blocks": {
+        "qa_0": {
+          "type": "qa",
+          "settings": {
+            "question": "Will this restock?",
+            "answer": "<p>No. The Hat Dealers drops are one-time only — when a colourway sells out, it’s gone for good. Made to be worn, not restocked.</p>"
+          }
+        },
+        "qa_1": {
+          "type": "qa",
+          "settings": {
+            "question": "How does the fit work?",
+            "answer": "<p>Every hat is one size: a structured 5-panel trucker with an adjustable snapback that fits roughly 21.5″–24″ (54.5–61cm). Mid-profile crown, curved brim.</p>"
+          }
+        },
+        "qa_2": {
+          "type": "qa",
+          "settings": {
+            "question": "When will my order ship?",
+            "answer": "<p>Orders ship within 2–4 business days. You’ll get tracking by email as soon as it ships.</p>"
+          }
+        },
+        "qa_3": {
+          "type": "qa",
+          "settings": {
+            "question": "Do you ship worldwide?",
+            "answer": "<p>Yes — we ship to the US and internationally (UK, Japan, Canada, Singapore, UAE, Australia and more). Any import duties or taxes are the customer’s responsibility.</p>"
+          }
+        },
+        "qa_4": {
+          "type": "qa",
+          "settings": {
+            "question": "Can I return or exchange?",
+            "answer": "<p>Yes — free returns. Ordered the wrong team? Exchange it for another country hat while it’s still in stock.</p>"
+          }
+        },
+        "qa_5": {
+          "type": "qa",
+          "settings": {
+            "question": "What are they made of?",
+            "answer": "<p>Premium 5-panel structured trucker — cotton-twill front, breathable mesh back, 3D-raised embroidery and gold detailing. Spot clean only.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "qa_0",
+        "qa_1",
+        "qa_2",
+        "qa_3",
+        "qa_4",
+        "qa_5"
+      ],
+      "settings": {
+        "heading": "FAQ",
+        "subheading": "Everything you need to know before the drop.",
+        "open_first": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "featured_collection",
+    "ugc",
+    "faq"
+  ]
+}
