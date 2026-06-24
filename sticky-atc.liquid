@@ -1,0 +1,62 @@
+{%- comment -%} Sticky Add to Cart bar — added by CRO audit. Self-contained, lightweight (CSS+tiny JS, no app). {%- endcomment -%}
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+-%}
+{%- if product != blank and variant != blank -%}
+  <sticky-atc class="hd-satc" id="hd-satc-{{ section.id }}">
+    <div class="hd-satc__in page-width">
+      {%- if product.featured_media -%}
+        <img class="hd-satc__img" src="{{ product.featured_media | image_url: width: 96 }}" alt="" width="48" height="48" loading="lazy">
+      {%- endif -%}
+      <span class="hd-satc__info">
+        <span class="hd-satc__t">{{ product.title | escape }}</span>
+        <span class="hd-satc__p">{{ variant.price | money }}{% if section.settings.show_one_size %} · One size{% endif %}</span>
+      </span>
+      <form method="post" action="{{ routes.cart_add_url }}" class="hd-satc__form">
+        <input type="hidden" name="id" value="{{ variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" name="add" class="hd-satc__btn"{% if variant.available == false %} disabled{% endif %}>
+          {%- if variant.available -%}{{ section.settings.button_label | default: 'Add to cart' }}{%- else -%}{{ 'products.product.sold_out' | t }}{%- endif -%}
+        </button>
+      </form>
+    </div>
+  </sticky-atc>
+  <style>
+    .hd-satc{position:fixed;left:0;right:0;bottom:0;z-index:998;transform:translateY(115%);transition:transform .28s cubic-bezier(.4,0,.2,1);background:rgba(10,11,13,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid rgba(232,180,90,.4)}
+    .hd-satc.is-on{transform:translateY(0)}
+    .hd-satc__in{display:flex;align-items:center;gap:12px;padding:10px 16px;margin:0 auto}
+    .hd-satc__img{width:48px;height:48px;border-radius:8px;object-fit:cover;flex:none;background:#1b1d22}
+    .hd-satc__info{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+    .hd-satc__t{font-size:14px;font-weight:600;color:#f3ede0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:42vw}
+    .hd-satc__p{font-size:13px;color:rgba(243,237,224,.7)}
+    .hd-satc__form{margin-left:auto;flex:none}
+    .hd-satc__btn{background:#e8b45a;color:#231a06;border:0;border-radius:8px;padding:0 24px;min-height:48px;font-weight:800;letter-spacing:.04em;font-size:14px;font-family:inherit;cursor:pointer}
+    .hd-satc__btn[disabled]{background:#3a3f48;color:#8a8f98;cursor:not-allowed}
+    @media(min-width:990px){.hd-satc__t{max-width:none}.hd-satc__in{padding:12px 5vw}}
+  </style>
+  <script>
+    (function(){
+      var bar=document.getElementById('hd-satc-{{ section.id }}');
+      if(!bar)return;
+      var anchor=document.querySelector('.product-form__submit')||document.querySelector('.product-form');
+      function show(v){bar.classList.toggle('is-on',v);}
+      if('IntersectionObserver' in window && anchor){
+        new IntersectionObserver(function(e){show(!e[0].isIntersecting);},{rootMargin:'0px 0px -8% 0px'}).observe(anchor);
+      }else{
+        window.addEventListener('scroll',function(){show((window.scrollY||0)>700);},{passive:true});
+      }
+    })();
+  </script>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Sticky Add to Cart",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Add to cart" },
+    { "type": "checkbox", "id": "show_one_size", "label": "Show 'One size' next to price", "default": true }
+  ],
+  "presets": [{ "name": "Sticky Add to Cart" }]
+}
+{% endschema %}
