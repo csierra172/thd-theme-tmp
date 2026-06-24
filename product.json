@@ -1,0 +1,369 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "custom_liquid_iwVJ9i": {
+          "type": "custom_liquid",
+          "name": "PICKUP OPTIONS",
+          "settings": {
+            "custom_liquid": "<style>\n  /* =========================================================\n     WRAP + UPGRADE the native Shopify pickup availability block\n     ========================================================= */\n\n  /* Outer container — branded dark card */\n  pickup-availability-preview{\n    display: block !important;\n    position: relative !important;\n    margin: 14px 0 !important;\n    padding: 42px 16px 16px 16px !important;\n    background: #111111 !important;\n    border: 1px solid rgba(255,255,255,.12) !important;\n    border-radius: 12px !important;\n    color: #fff !important;\n    font-family: inherit !important;\n  }\n\n  /* \"IN STOCK & READY FOR PICKUP\" status label — single instance */\n  pickup-availability-preview::before{\n    content: \"● In Stock & Ready for Pickup\";\n    position: absolute;\n    top: 16px; left: 16px;\n    font-size: 11px !important;\n    letter-spacing: .14em;\n    text-transform: uppercase;\n    font-weight: 700 !important;\n    color: #22c55e !important;\n    line-height: 1;\n    animation: hd-pulse-color 2s ease-in-out infinite;\n  }\n  @keyframes hd-pulse-color{\n    0%,100% { opacity: 1; }\n    50%     { opacity: .65; }\n  }\n\n  /* Hide native checkmark icon */\n  pickup-availability-preview svg{\n    display: none !important;\n  }\n\n  /* \"Pickup available at...\" heading */\n  pickup-availability-preview h3,\n  pickup-availability-preview h4,\n  pickup-availability-preview [class*=\"title\"]{\n    font-size: 14px !important;\n    font-weight: 600 !important;\n    color: #fff !important;\n    margin: 0 0 4px !important;\n    line-height: 1.4 !important;\n    letter-spacing: 0 !important;\n    text-transform: none !important;\n  }\n\n  /* \"Usually ready in 24 hours\" + meta */\n  pickup-availability-preview p,\n  pickup-availability-preview small,\n  pickup-availability-preview span,\n  pickup-availability-preview [class*=\"time\"],\n  pickup-availability-preview [class*=\"stock\"]{\n    font-size: 12.5px !important;\n    color: rgba(255,255,255,.6) !important;\n    margin: 0 0 10px !important;\n    line-height: 1.4 !important;\n    font-weight: 400 !important;\n    letter-spacing: 0 !important;\n    text-transform: none !important;\n  }\n\n  /* \"View store information\" link — branded CTA */\n  pickup-availability-preview button,\n  pickup-availability-preview a{\n    display: inline-flex !important;\n    align-items: center !important;\n    gap: 6px !important;\n    background: transparent !important;\n    color: #fff !important;\n    font-size: 11.5px !important;\n    letter-spacing: .1em !important;\n    text-transform: uppercase !important;\n    font-weight: 700 !important;\n    text-decoration: none !important;\n    padding: 0 0 2px 0 !important;\n    border: 0 !important;\n    border-bottom: 1px solid rgba(255,255,255,.25) !important;\n    border-radius: 0 !important;\n    cursor: pointer !important;\n    transition: border-color .2s ease !important;\n    margin-top: 4px !important;\n  }\n  pickup-availability-preview button:hover,\n  pickup-availability-preview a:hover{\n    border-color: #fff !important;\n    background: transparent !important;\n    color: #fff !important;\n  }\n\n  /* Arrow after CTA */\n  pickup-availability-preview button::after,\n  pickup-availability-preview a::after{\n    content: \"→\";\n    font-size: 13px;\n    line-height: 1;\n    margin-left: 2px;\n  }\n\n\n  /* =========================================================\n     UPGRADE the drawer that opens on \"View store information\"\n     ========================================================= */\n\n  .drawer-overlay,\n  [class*=\"drawer\"][class*=\"overlay\"],\n  dialog::backdrop{\n    background: rgba(0,0,0,.75) !important;\n    backdrop-filter: blur(4px) !important;\n  }\n\n  pickup-availability-drawer,\n  [role=\"dialog\"],\n  .drawer,\n  [class*=\"pickup-availability-drawer\"]{\n    background: #0a0a0a !important;\n    color: #fff !important;\n    border-left: 1px solid rgba(255,255,255,.1) !important;\n    box-shadow: -12px 0 40px rgba(0,0,0,.5) !important;\n  }\n\n  .drawer__inner,\n  .drawer-content,\n  [class*=\"drawer-content\"],\n  [class*=\"drawer-panel\"],\n  [class*=\"pickup-availability-drawer\"] > *{\n    background: #0a0a0a !important;\n    color: #fff !important;\n  }\n\n  .drawer__header,\n  [class*=\"drawer\"][class*=\"header\"],\n  pickup-availability-drawer h2,\n  pickup-availability-drawer h3{\n    background: #0a0a0a !important;\n    color: #fff !important;\n    border-bottom: 1px solid rgba(255,255,255,.1) !important;\n    padding: 20px 24px !important;\n    font-size: 18px !important;\n    letter-spacing: .04em !important;\n    text-transform: uppercase !important;\n    font-weight: 800 !important;\n  }\n\n  .drawer__close,\n  [class*=\"drawer\"][class*=\"close\"],\n  pickup-availability-drawer button[aria-label*=\"close\" i]{\n    background: transparent !important;\n    color: #fff !important;\n    border: 1px solid rgba(255,255,255,.2) !important;\n    border-radius: 50% !important;\n    width: 36px !important;\n    height: 36px !important;\n  }\n\n  pickup-availability-drawer li,\n  [class*=\"pickup-availability-drawer\"] li{\n    background: #111 !important;\n    border: 1px solid rgba(255,255,255,.08) !important;\n    border-radius: 12px !important;\n    padding: 18px !important;\n    margin: 12px 0 !important;\n    list-style: none !important;\n  }\n\n  pickup-availability-drawer a{\n    color: #fff !important;\n    text-decoration: underline !important;\n    text-underline-offset: 3px !important;\n  }\n</style>"
+          }
+        },
+        "custom_liquid_fnp8Tn": {
+          "type": "custom_liquid",
+          "name": "ACCORDIAN",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<style>\n  .hd-acc {\n    max-width: 100% !important;\n    margin: 20px 0 !important;\n    font-family: inherit;\n    color: #fff !important;\n  }\n\n  .hd-acc * {\n    box-sizing: border-box;\n  }\n\n  .hd-acc__item {\n    border-top: 1px solid rgba(255,255,255,.12);\n  }\n\n  .hd-acc__item:last-child {\n    border-bottom: 1px solid rgba(255,255,255,.12);\n  }\n\n  .hd-acc__btn {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: 14px;\n    padding: 18px 2px;\n    background: transparent;\n    border: 0;\n    color: #fff;\n    cursor: pointer;\n    text-align: left;\n    font-family: inherit;\n    list-style: none;\n  }\n\n  .hd-acc__btn::-webkit-details-marker {\n    display: none;\n  }\n\n  .hd-acc__head {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    flex: 1;\n    min-width: 0;\n  }\n\n  .hd-acc__label {\n    font-size: 13px !important;\n    letter-spacing: .12em;\n    text-transform: uppercase;\n    font-weight: 700 !important;\n    color: #fff !important;\n    line-height: 1 !important;\n  }\n\n  .hd-acc__chev {\n    width: 14px;\n    height: 14px;\n    flex: none;\n    color: rgba(255,255,255,.6);\n    transition: transform .25s ease;\n  }\n\n  .hd-acc__chev svg {\n    width: 100%;\n    height: 100%;\n    stroke: currentColor;\n    fill: none;\n    stroke-width: 2;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  .hd-acc__item[open] .hd-acc__chev {\n    transform: rotate(180deg);\n  }\n\n  .hd-acc__body {\n    padding: 4px 2px 22px 2px;\n    font-size: 13.5px !important;\n    line-height: 1.65 !important;\n    color: rgba(255,255,255,.78) !important;\n  }\n\n  .hd-acc__lead {\n    font-size: 14px !important;\n    color: #fff !important;\n    margin: 0 0 10px !important;\n    font-weight: 500 !important;\n  }\n\n  .hd-acc__lead b {\n    font-weight: 700;\n    color: #fff;\n  }\n\n  .hd-acc__body ul {\n    list-style: none;\n    padding: 0;\n    margin: 0;\n  }\n\n  .hd-acc__body ul li {\n    position: relative;\n    padding: 4px 0 4px 16px;\n  }\n\n  .hd-acc__body ul li::before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 13px;\n    width: 6px;\n    height: 1px;\n    background: rgba(255,255,255,.5);\n  }\n\n  .hd-acc__body p {\n    margin: 0 0 8px !important;\n  }\n\n  .hd-acc__body p:last-child {\n    margin-bottom: 0 !important;\n  }\n\n  @media(max-width: 520px) {\n    .hd-acc__btn {\n      padding: 16px 2px;\n    }\n\n    .hd-acc__body {\n      padding: 4px 2px 18px 2px;\n      font-size: 13px !important;\n    }\n  }\n</style>\n\n<div class=\"hd-acc\">\n\n  <details class=\"hd-acc__item\" open>\n    <summary class=\"hd-acc__btn\">\n      <span class=\"hd-acc__head\">\n        <span class=\"hd-acc__label\">Fit &amp; Sizing</span>\n      </span>\n      <span class=\"hd-acc__chev\">\n        <svg viewBox=\"0 0 24 24\">\n          <path d=\"M6 9l6 6 6-6\"></path>\n        </svg>\n      </span>\n    </summary>\n\n    <div class=\"hd-acc__body\">\n      <p class=\"hd-acc__lead\">Classic <b>5 panel snapback</b> construction</p>\n      <ul>\n        <li>Adjustable snap closure</li>\n        <li>Structured crown</li>\n        <li>Mid profile fit</li>\n        <li>One size fits most</li>\n      </ul>\n    </div>\n  </details>\n\n  <details class=\"hd-acc__item\">\n    <summary class=\"hd-acc__btn\">\n      <span class=\"hd-acc__head\">\n        <span class=\"hd-acc__label\">Shipping</span>\n      </span>\n      <span class=\"hd-acc__chev\">\n        <svg viewBox=\"0 0 24 24\">\n          <path d=\"M6 9l6 6 6-6\"></path>\n        </svg>\n      </span>\n    </summary>\n\n    <div class=\"hd-acc__body\">\n      <p>Orders ship within 2 to 4 business days.</p>\n      <p>Tracking information will be emailed once the order has shipped.</p>\n    </div>\n  </details>\n\n  <details class=\"hd-acc__item\">\n    <summary class=\"hd-acc__btn\">\n      <span class=\"hd-acc__head\">\n        <span class=\"hd-acc__label\">Care</span>\n      </span>\n      <span class=\"hd-acc__chev\">\n        <svg viewBox=\"0 0 24 24\">\n          <path d=\"M6 9l6 6 6-6\"></path>\n        </svg>\n      </span>\n    </summary>\n\n    <div class=\"hd-acc__body\">\n      <p>Spot clean recommended.</p>\n    </div>\n  </details>\n\n</div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "buy_buttons",
+        "custom_liquid_iwVJ9i",
+        "custom_liquid_fnp8Tn",
+        "variant_picker",
+        "description"
+      ],
+      "custom_css": [],
+      "settings": {
+        "enable_prev_next": false,
+        "enable_sticky_info": true,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1776903523a2ae804f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_fNfwgE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": false,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "4_to_5_star",
+            "show_review_media": true,
+            "display_order": "most_recent",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 30,
+            "review_length": "small",
+            "text_size": "small",
+            "image_ratio": "1",
+            "reviews_shown": 5,
+            "show_reviewer_name": true,
+            "show_product_name": false,
+            "hide_arrows_mobile": false,
+            "arrows_position": "sides",
+            "max_width": 900,
+            "corner_styling": "soft",
+            "header_text_color": "#ffffff",
+            "text_color": "#d1d5db",
+            "card_color": "#0f0f0f",
+            "stars_color": "#facc15",
+            "arrows_color": "#ffffff",
+            "transition_speed": 8,
+            "header_text": "Customer Reviews",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_fNfwgE"
+      ],
+      "custom_css": [
+        "& > div {max-width: 680px !important; margin: 24px auto !important; padding: 26px 22px !important; background: #0a0a0a !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; border-radius: 14px !important;}",
+        "& .jdgm-carousel-title {font-size: 20px !important; text-transform: uppercase !important; letter-spacing: 0.04em !important; text-align: left !important; font-weight: 800 !important;}",
+        "& .jdgm-carousel-item {background: #111 !important; border-radius: 12px !important; padding: 20px 18px !important; text-align: left !important;}"
+      ],
+      "name": "Customer Reviews",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_QFfReE": {
+      "type": "custom-liquid",
+      "name": "WE DO THINGS DIFFERENT - LIQUID",
+      "settings": {
+        "custom_liquid": "<style>\n  .hd-bd{\n    max-width:680px !important;\n    margin:24px auto !important;\n    padding:28px 26px !important;\n    background:#0a0a0a !important;\n    background-color:#0a0a0a !important;\n    border:1px solid rgba(255,255,255,.10) !important;\n    border-radius:14px !important;\n    color:#fff !important;\n    font-family:inherit;\n    position:relative;\n    z-index:1;\n    box-shadow:0 8px 30px rgba(0,0,0,.35);\n  }\n  .hd-bd *{box-sizing:border-box}\n  .hd-bd__title{\n    font-size:22px !important;\n    letter-spacing:.02em;\n    text-transform:uppercase;\n    font-weight:800 !important;\n    margin:0 0 8px !important;\n    line-height:1 !important;\n    color:#fff !important;\n  }\n  .hd-bd__sub{\n    font-size:13.5px !important;\n    line-height:1.5 !important;\n    color:rgba(255,255,255,.62) !important;\n    margin:0 0 22px !important;\n    max-width:44ch;\n    font-weight:400 !important;\n  }\n  .hd-bd__grid{\n    display:grid !important;\n    grid-template-columns:repeat(4,1fr) !important;\n    gap:14px !important;\n  }\n  .hd-bd__cell{\n    display:flex !important;\n    flex-direction:column !important;\n    align-items:center !important;\n    gap:8px !important;\n    text-align:center !important;\n  }\n  .hd-bd__icon{\n    width:44px;height:44px;\n    border:1px solid rgba(255,255,255,.22);\n    border-radius:50%;\n    display:grid;place-items:center;\n    color:#fff;\n    background:transparent;\n  }\n  .hd-bd__icon svg{\n    width:20px;height:20px;\n    stroke:#fff;fill:none;stroke-width:1.6;\n    stroke-linecap:round;stroke-linejoin:round;\n  }\n  .hd-bd__label{\n    font-size:11px !important;\n    letter-spacing:.04em;\n    line-height:1.25 !important;\n    color:#fff !important;\n    font-weight:600 !important;\n  }\n  .hd-bd__sublabel{\n    font-size:10px !important;\n    line-height:1.25 !important;\n    color:rgba(255,255,255,.55) !important;\n    font-weight:400 !important;\n    margin-top:2px;\n  }\n  @media(max-width:520px){\n    .hd-bd{padding:22px 20px !important;margin:16px 14px !important;border-radius:12px !important}\n    .hd-bd__grid{gap:10px !important}\n    .hd-bd__icon{width:38px;height:38px}\n    .hd-bd__icon svg{width:18px;height:18px}\n    .hd-bd__label{font-size:10.5px !important}\n    .hd-bd__sublabel{font-size:9.5px !important}\n  }\n</style>\n\n<div class=\"hd-bd\">\n  <h2 class=\"hd-bd__title\">WE DO THINGS DIFFERENT.</h2>\n  \n<br>\n  <div class=\"hd-bd__grid\">\n    <div class=\"hd-bd__cell\">\n      <div class=\"hd-bd__icon\" aria-hidden=\"true\">\n        <svg viewBox=\"0 0 24 24\"><path d=\"M12 3 L14.3 8.6 L20.3 9.1 L15.8 13 L17.2 19 L12 15.8 L6.8 19 L8.2 13 L3.7 9.1 L9.7 8.6 Z\"/></svg>\n      </div>\n      <div class=\"hd-bd__label\">Premium<br>Embroidery</div>\n      <div class=\"hd-bd__sublabel\">Clean stitching</div>\n    </div>\n\n    <div class=\"hd-bd__cell\">\n      <div class=\"hd-bd__icon\" aria-hidden=\"true\">\n        <svg viewBox=\"0 0 24 24\"><path d=\"M4 12 L20 12 M14 6 L20 12 L14 18\"/></svg>\n      </div>\n      <div class=\"hd-bd__label\">Ships in 2 to<br>4 Days</div>\n      <div class=\"hd-bd__sublabel\">Fast fulfillment</div>\n    </div>\n\n    <div class=\"hd-bd__cell\">\n      <div class=\"hd-bd__icon\" aria-hidden=\"true\">\n        <svg viewBox=\"0 0 24 24\"><path d=\"M6 4 L18 4 L20 8 L12 20 L4 8 Z M6 4 L10 8 L12 20 M18 4 L14 8 L12 20 M4 8 L20 8\"/></svg>\n      </div>\n      <div class=\"hd-bd__label\">Limited<br>Drops</div>\n      <div class=\"hd-bd__sublabel\">Small runs only</div>\n    </div>\n\n    <div class=\"hd-bd__cell\">\n      <div class=\"hd-bd__icon\" aria-hidden=\"true\">\n        <svg viewBox=\"0 0 24 24\"><path d=\"M4 8 A8 8 0 0 1 18 6 L20 4 M20 4 L20 9 L15 9 M20 16 A8 8 0 0 1 6 18 L4 20 M4 20 L4 15 L9 15\"/></svg>\n      </div>\n      <div class=\"hd-bd__label\">Free<br>Returns</div>\n      <div class=\"hd-bd__sublabel\">We make it easy</div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_eR7bjQ": {
+      "type": "custom-liquid",
+      "name": "SEEN ON THE DEALERS",
+      "settings": {
+        "custom_liquid": "<style>\n  .hd-seen {\n    max-width: 680px !important;\n    margin: 18px auto !important;\n    padding: 24px 20px !important;\n    background: rgba(8,8,8,.92) !important;\n    border: 1px solid rgba(255,255,255,.12) !important;\n    border-radius: 14px !important;\n    color: #fff !important;\n    font-family: inherit;\n    position: relative;\n    z-index: 1;\n    box-shadow: 0 8px 30px rgba(0,0,0,.35);\n  }\n\n  .hd-seen * {\n    box-sizing: border-box;\n  }\n\n  .hd-seen__title {\n    font-size: 20px !important;\n    letter-spacing: .04em;\n    text-transform: uppercase;\n    font-weight: 900 !important;\n    margin: 0 0 6px !important;\n    line-height: 1 !important;\n    color: #fff !important;\n  }\n\n  .hd-seen__sub {\n    font-size: 13px !important;\n    line-height: 1.4 !important;\n    color: rgba(255,255,255,.62) !important;\n    margin: 0 0 18px !important;\n    font-weight: 400 !important;\n  }\n\n  .hd-seen__grid {\n    display: grid !important;\n    grid-template-columns: repeat(2, 1fr) !important;\n    gap: 10px !important;\n  }\n\n  .hd-seen__tile {\n    position: relative;\n    aspect-ratio: 1 / 1;\n    border-radius: 10px;\n    overflow: hidden;\n    background: #111;\n    border: 1px solid rgba(255,255,255,.08);\n    display: block;\n    text-decoration: none;\n  }\n\n  .hd-seen__tile img,\n  .hd-seen__tile video {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    display: block;\n    transition: transform .4s ease;\n  }\n\n  .hd-seen__tile:hover img,\n  .hd-seen__tile:hover video {\n    transform: scale(1.04);\n  }\n\n  .hd-seen__foot {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-top: 18px;\n    padding-top: 16px;\n    border-top: 1px solid rgba(255,255,255,.08);\n  }\n\n  .hd-seen__tag {\n    font-size: 13px;\n    letter-spacing: .1em;\n    text-transform: uppercase;\n    color: #fff;\n    font-weight: 800;\n    text-decoration: none;\n  }\n\n  .hd-seen__arrow {\n    width: 36px;\n    height: 36px;\n    border: 1px solid rgba(255,255,255,.25);\n    border-radius: 50%;\n    display: grid;\n    place-items: center;\n    color: #fff;\n    text-decoration: none;\n    transition: background .2s ease, border-color .2s ease, transform .2s ease;\n  }\n\n  .hd-seen__arrow:hover {\n    background: #fff;\n    color: #0a0a0a;\n    border-color: #fff;\n    transform: translateX(2px);\n  }\n\n  .hd-seen__arrow svg {\n    width: 16px;\n    height: 16px;\n    stroke: currentColor;\n    fill: none;\n    stroke-width: 1.8;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  @media(max-width: 520px) {\n    .hd-seen {\n      padding: 22px 18px !important;\n      margin: 16px 14px !important;\n      border-radius: 12px !important;\n    }\n\n    .hd-seen__title {\n      font-size: 18px !important;\n    }\n  }\n</style>\n\n<div class=\"hd-seen\">\n  <h2 class=\"hd-seen__title\">SEEN ON THE DEALERS</h2>\n  <p class=\"hd-seen__sub\">Tag us @thehatdealers to be featured.</p>\n\n  <div class=\"hd-seen__grid\">\n    <a class=\"hd-seen__tile\" href=\"https://www.instagram.com/thehatdealers/\" target=\"_blank\" rel=\"noopener\">\n      <video class=\"hd-seen__video\" autoplay muted loop playsinline preload=\"metadata\">\n        <source src=\"https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-seen-DZvoW2Thudf-opt.mp4?v=1781824260\" type=\"video/mp4\">\n      </video>\n    </a>\n\n    <a class=\"hd-seen__tile\" href=\"https://www.instagram.com/thehatdealers/\" target=\"_blank\" rel=\"noopener\">\n      <video class=\"hd-seen__video\" autoplay muted loop playsinline preload=\"metadata\">\n        <source src=\"https://cdn.shopify.com/s/files/1/0956/0322/8950/files/thd-seen-DZaxDegSWZ7-bright.mp4?v=1781825229\" type=\"video/mp4\">\n      </video>\n    </a>\n\n    <a class=\"hd-seen__tile\" href=\"https://www.instagram.com/thehatdealers/\" target=\"_blank\" rel=\"noopener\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0956/0322/8950/files/589868328_17929177092148383_2738147984351847946_n.jpg?v=1776990065\" alt=\"The Hat Dealers customer style\">\n    </a>\n\n    <a class=\"hd-seen__tile\" href=\"https://www.instagram.com/thehatdealers/\" target=\"_blank\" rel=\"noopener\">\n      <video class=\"hd-seen__video\" autoplay muted loop playsinline preload=\"metadata\">\n        <source src=\"https://cdn.shopify.com/videos/c/o/v/c24eed96aca74537976159346e9c465a.mp4\" type=\"video/mp4\">\n      </video>\n    </a>\n  </div>\n\n  <div class=\"hd-seen__foot\">\n    <a class=\"hd-seen__tag\" href=\"https://www.instagram.com/thehatdealers/\" target=\"_blank\" rel=\"noopener\">#HATDEALERS</a>\n\n    <a class=\"hd-seen__arrow\" href=\"https://www.instagram.com/thehatdealers/\" target=\"_blank\" rel=\"noopener\" aria-label=\"View on Instagram\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"M5 12 L19 12 M13 6 L19 12 L13 18\"></path>\n      </svg>\n    </a>\n  </div>\n</div>\n\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    const videos = document.querySelectorAll('.hd-seen__video');\n\n    videos.forEach(function(video) {\n      video.muted = true;\n      video.playsInline = true;\n\n      video.addEventListener('loadedmetadata', function() {\n        video.currentTime = 0;\n        video.play().catch(function() {});\n      });\n\n      video.addEventListener('timeupdate', function() {\n        if (video.currentTime >= 5) {\n          video.currentTime = 0;\n          video.play().catch(function() {});\n        }\n      });\n    });\n  });\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "more_from_drop_bKXAMR": {
+      "type": "more-from-drop",
+      "name": "More From Drop",
+      "settings": {
+        "heading": "More from our Drop",
+        "collection": "drop-5",
+        "max_products": 0,
+        "columns_desktop": "4",
+        "exclude_current": true,
+        "show_viewall": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "custom_liquid_c764na": {
+      "type": "custom-liquid",
+      "name": "FAQ",
+      "settings": {
+        "custom_liquid": "<div class=\"hd-faq\">\n  <h2 class=\"hd-faq__heading\">Frequently Asked Questions</h2>\n\n  <details class=\"hd-faq__item\">\n    <summary>\n      <span>Does it fit all sizes?</span>\n      <span class=\"hd-faq__icon\" aria-hidden=\"true\"></span>\n    </summary>\n    <div class=\"hd-faq__a\">\n      <p>Yes. The adjustable snapback fits most head sizes comfortably.</p>\n    </div>\n  </details>\n\n  <details class=\"hd-faq__item\">\n    <summary>\n      <span>How long does shipping take?</span>\n      <span class=\"hd-faq__icon\" aria-hidden=\"true\"></span>\n    </summary>\n    <div class=\"hd-faq__a\">\n      <p>Orders ship within <strong>2–4 business days</strong>.</p>\n      <p>Most U.S. deliveries arrive <strong>2–4 business days after shipment</strong>.</p>\n      <p>We ship <strong>worldwide</strong>, though international delivery times may vary.</p>\n      <p>Full details can be found in our <a href=\"/policies/shipping-policy\"><strong>Shipping Policy</strong></a>.</p>\n    </div>\n  </details>\n\n  <details class=\"hd-faq__item\">\n    <summary>\n      <span>Will this restock?</span>\n      <span class=\"hd-faq__icon\" aria-hidden=\"true\"></span>\n    </summary>\n    <div class=\"hd-faq__a\">\n      <p>Most drops are limited and may not restock once sold out.</p>\n    </div>\n  </details>\n\n  <details class=\"hd-faq__item\">\n    <summary>\n      <span>How do I clean the hat?</span>\n      <span class=\"hd-faq__icon\" aria-hidden=\"true\"></span>\n    </summary>\n    <div class=\"hd-faq__a\">\n      <p>We recommend spot cleaning with a damp cloth and letting it air dry.</p>\n    </div>\n  </details>\n</div>\n\n<style>\n  .hd-faq {\n    max-width: 820px;\n    margin: 0 auto;\n    padding: 40px 24px;\n    color: #fff;\n  }\n  .hd-faq__heading {\n    text-align: left;\n    text-transform: uppercase;\n    letter-spacing: 0.08em;\n    font-size: 20px;\n    font-weight: 700;\n    margin: 0 0 24px;\n  }\n  .hd-faq__item {\n    border-bottom: 1px solid rgba(255,255,255,0.12);\n    padding: 18px 0;\n  }\n  .hd-faq__item:first-of-type {\n    border-top: 1px solid rgba(255,255,255,0.12);\n  }\n  .hd-faq__item summary {\n    list-style: none;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    cursor: pointer;\n    font-size: 16px;\n    font-weight: 600;\n    letter-spacing: 0.02em;\n    padding: 4px 0;\n  }\n  .hd-faq__item summary::-webkit-details-marker { display: none; }\n  .hd-faq__icon {\n    position: relative;\n    width: 16px;\n    height: 16px;\n    flex-shrink: 0;\n    margin-left: 16px;\n  }\n  .hd-faq__icon::before,\n  .hd-faq__icon::after {\n    content: \"\";\n    position: absolute;\n    top: 50%;\n    left: 0;\n    width: 100%;\n    height: 1.5px;\n    background: currentColor;\n    transform: translateY(-50%);\n    transition: transform 0.2s ease;\n  }\n  .hd-faq__icon::after { transform: translateY(-50%) rotate(90deg); }\n  .hd-faq__item[open] .hd-faq__icon::after { transform: translateY(-50%) rotate(0); }\n  .hd-faq__a {\n    font-size: 14px;\n    line-height: 1.6;\n    opacity: 0.85;\n    margin-top: 10px;\n    padding-right: 32px;\n  }\n  .hd-faq__a p { margin: 0 0 10px; }\n  .hd-faq__a p:last-child { margin-bottom: 0; }\n  .hd-faq__a a { text-decoration: underline; }\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_J3cH4D": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "MORE FROM OUR DROP",
+      "settings": {
+        "custom_liquid": "<style>\n  .hd-more{\n    max-width:680px !important;\n    margin:24px auto !important;\n    padding:24px 22px !important;\n    background:#0a0a0a !important;\n    border:1px solid rgba(255,255,255,.10) !important;\n    border-radius:14px !important;\n    color:#fff !important;\n    font-family:inherit;\n    position:relative;z-index:1;\n    box-shadow:0 8px 30px rgba(0,0,0,.35);\n  }\n  .hd-more *{box-sizing:border-box}\n\n  .hd-more__head{\n    display:flex;justify-content:space-between;align-items:center;\n    margin-bottom:18px;gap:16px;\n  }\n  .hd-more__title{\n    font-size:20px !important;letter-spacing:.04em;text-transform:uppercase;\n    font-weight:800 !important;margin:0 !important;line-height:1 !important;color:#fff !important;\n  }\n  .hd-more__viewall{\n    font-size:13px !important;color:rgba(255,255,255,.85) !important;\n    text-decoration:underline;text-underline-offset:3px;\n    font-weight:500 !important;white-space:nowrap;\n  }\n  .hd-more__viewall:hover{color:#fff !important}\n\n  .hd-more__grid{\n    display:grid !important;\n    grid-template-columns:repeat(2,1fr) !important;\n    gap:12px !important;\n  }\n  @media(min-width:640px){\n    .hd-more__grid{grid-template-columns:repeat(4,1fr) !important}\n  }\n\n  .hd-more__card{\n    display:block;text-decoration:none;color:#fff;\n    background:#111111;\n    border:1px solid rgba(255,255,255,.08);\n    border-radius:12px;\n    overflow:hidden;\n    transition:border-color .2s ease, transform .2s ease;\n  }\n  .hd-more__card:hover{\n    border-color:rgba(255,255,255,.22);\n    transform:translateY(-2px);\n  }\n  .hd-more__media{\n    position:relative;aspect-ratio:1/1;background:#0f0f0f;overflow:hidden;\n  }\n  .hd-more__media img{\n    width:100%;height:100%;object-fit:cover;display:block;\n    transition:transform .45s ease;\n  }\n  .hd-more__card:hover .hd-more__media img{transform:scale(1.04)}\n  .hd-more__badge{\n    position:absolute;top:8px;left:8px;\n    background:rgba(0,0,0,.7);color:#fff;\n    font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;\n    padding:4px 7px;border-radius:4px;font-weight:700;\n    backdrop-filter:blur(4px);\n  }\n  .hd-more__info{padding:12px 12px 14px}\n  .hd-more__name{\n    font-size:13px;font-weight:500;line-height:1.3;color:#fff;\n    margin:0 0 4px;\n    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;\n  }\n  .hd-more__price{\n    font-size:13px;font-weight:600;color:rgba(255,255,255,.88);\n    margin:0;\n  }\n  .hd-more__price s{color:rgba(255,255,255,.4);margin-right:6px;font-weight:400}\n\n  @media(max-width:520px){\n    .hd-more{padding:22px 18px !important;margin:16px 14px !important;border-radius:12px !important}\n    .hd-more__title{font-size:18px !important}\n  }\n</style>\n\n{%- assign col = collections['shop-all'] -%}\n{%- comment -%}\n  Change 'shop-all' above to your main collection handle if different.\n  To show products from a specific drop, use e.g. collections['ny-drop']\n{%- endcomment -%}\n\n<div class=\"hd-more\">\n  <div class=\"hd-more__head\">\n    <h2 class=\"hd-more__title\">More from our Drop</h2>\n    <a class=\"hd-more__viewall\" href=\"{{ col.url | default: '/collections/all' }}\">View all</a>\n  </div>\n\n  <div class=\"hd-more__grid\">\n    {%- assign shown = 0 -%}\n    {%- for p in col.products -%}\n      {%- if p.handle != product.handle and shown < 4 -%}\n        <a class=\"hd-more__card\" href=\"{{ p.url }}\">\n          <div class=\"hd-more__media\">\n            {%- if p.featured_image -%}\n              <img src=\"{{ p.featured_image | image_url: width: 600 }}\"\n                   alt=\"{{ p.title | escape }}\"\n                   loading=\"lazy\" width=\"600\" height=\"600\">\n            {%- endif -%}\n            {%- if p.available == false -%}\n              <span class=\"hd-more__badge\">Sold Out</span>\n            {%- elsif p.compare_at_price > p.price -%}\n              <span class=\"hd-more__badge\">Sale</span>\n            {%- endif -%}\n          </div>\n          <div class=\"hd-more__info\">\n            <p class=\"hd-more__name\">{{ p.title }}</p>\n            <p class=\"hd-more__price\">\n              {%- if p.compare_at_price > p.price -%}\n                <s>{{ p.compare_at_price | money }}</s>{{ p.price | money }}\n              {%- else -%}\n                {{ p.price | money }}\n              {%- endif -%}\n            </p>\n          </div>\n        </a>\n        {%- assign shown = shown | plus: 1 -%}\n      {%- endif -%}\n    {%- endfor -%}\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_HDHTGi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_e4Y9Dw": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h2>Premium Embroidery</h2><p>Clean stitching</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_n7Bz8c": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h2><strong>Ships in 2 to 4 Days</strong></h2><h2></h2><p>Fast fulfillment</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7gGbHH": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h2><strong>Limited Drops</strong></h2><p>Small runs only.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mJDHbp": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<h2>Free Returns</h2><p></p><p>We make it easy</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_e4Y9Dw",
+        "column_n7Bz8c",
+        "column_7gGbHH",
+        "column_mJDHbp"
+      ],
+      "disabled": true,
+      "name": "WE DO THINGS DIFFERENT",
+      "settings": {
+        "title": "WE DO THINGS DIFFERENT",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_m49WYT": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_dNPBGr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does it fit all sizes?",
+            "icon": "none",
+            "row_content": "<p>Yes. The adjustable snapback fits </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qNikYD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does shipping take?",
+            "icon": "none",
+            "row_content": "<p>Orders ship within <strong>2–4 business days</strong>.<br/><br/>Most U.S. deliveries arrive <strong>2–4 business days after shipment</strong>.</p><p>We ship <strong>worldwide</strong>, though international delivery times may vary.</p><p>Full details can be found in our <a href=\"/policies/shipping-policy\" title=\"Shipping Policy\"><strong>Shipping Policy.</strong><br/><br/></a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wMnQXi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will this restock?",
+            "icon": "none",
+            "row_content": "<p>Most drops are limited and may not restock once sold out.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pjdfp3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I clean the hat?",
+            "icon": "none",
+            "row_content": "<p>We recommend spot cleaning with a damp cloth and letting it air dry.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_dNPBGr",
+        "collapsible_row_qNikYD",
+        "collapsible_row_wMnQXi",
+        "collapsible_row_pjdfp3"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".collapsible-content {max-width: 820px; margin: 40px auto; padding: 0 24px;}",
+        ".collapsible-content .title {text-align: left; text-transform: uppercase; letter-spacing: 0.08em; font-size: 20px; font-weight: 700; margin-bottom: 24px;}",
+        ".accordion {border-top: 1px solid rgba(255, 255, 255, 0.12);}",
+        ".accordion__item {border-bottom: 1px solid rgba(255, 255, 255, 0.12); padding: 18px 0;}",
+        ".accordion__title {font-size: 16px; font-weight: 600; letter-spacing: 0.02em;}",
+        ".accordion__content {font-size: 14px; line-height: 1.6; opacity: 0.75; margin-top: 10px;}"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "custom_css": [
+        ".related-products .card-wrapper {margin-left: auto; margin-right: auto;}",
+        ".related-products h2 {text-align: center;}",
+        ".related-products .card-wrapper:hover {transform: translateY(-4px); transition: transform 0.25s ease;}"
+      ],
+      "name": "More From the Drop",
+      "settings": {
+        "heading": "More From The Drop",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_8ghhyV": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"hd-world\">\n  <div class=\"hd-world__inner\">\n    <h2 class=\"hd-world__heading\">Where The Dealers Are</h2>\n    <p class=\"hd-world__sub\">Shipped worldwide.</p>\n\n    <div class=\"hd-world__panel\">\n      <div class=\"hd-world__map-wrap\">\n        <div id=\"hd-map\" class=\"hd-world__map\"></div>\n\n        <svg class=\"hd-routes\" viewBox=\"0 0 1000 430\" preserveAspectRatio=\"none\">\n          <path class=\"hd-route hd-route--one\" d=\"M230 205 C360 105, 500 95, 640 135\" />\n          <path class=\"hd-route hd-route--two\" d=\"M230 205 C420 145, 620 160, 820 210\" />\n          <path class=\"hd-route hd-route--three\" d=\"M230 205 C420 245, 650 275, 835 325\" />\n          <path class=\"hd-route hd-route--four\" d=\"M230 205 C255 260, 315 280, 390 285\" />\n        </svg>\n\n        <div class=\"hd-box hd-box--one\">\n          <span class=\"hd-box__emoji\">📦</span>\n          <span class=\"hd-box__label\">THD</span>\n        </div>\n\n        <div class=\"hd-box hd-box--two\">\n          <span class=\"hd-box__emoji\">📦</span>\n          <span class=\"hd-box__label\">THD</span>\n        </div>\n\n        <div class=\"hd-box hd-box--three\">\n          <span class=\"hd-box__emoji\">📦</span>\n          <span class=\"hd-box__label\">THD</span>\n        </div>\n\n        <div class=\"hd-box hd-box--four\">\n          <span class=\"hd-box__emoji\">📦</span>\n          <span class=\"hd-box__label\">THD</span>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--us\">\n          <span class=\"hd-flag\">🇺🇸</span>\n          <strong>United States</strong>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--mx\">\n          <span class=\"hd-flag\">🇲🇽</span>\n          <strong>Mexico</strong>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--uk\">\n          <span class=\"hd-flag\">🇬🇧</span>\n          <strong>United Kingdom</strong>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--jp\">\n          <span class=\"hd-flag\">🇯🇵</span>\n          <strong>Japan</strong>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--ca\">\n          <span class=\"hd-flag\">🇨🇦</span>\n          <strong>Canada</strong>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--sg\">\n          <span class=\"hd-flag\">🇸🇬</span>\n          <strong>Singapore</strong>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--ae\">\n          <span class=\"hd-flag\">🇦🇪</span>\n          <strong>UAE</strong>\n        </div>\n\n        <div class=\"hd-geo-card hd-geo-card--au\">\n          <span class=\"hd-flag\">🇦🇺</span>\n          <strong>Australia</strong>\n        </div>\n      </div>\n\n      <div class=\"hd-world__stats\">\n        <div class=\"hd-world__stat\">\n          <span class=\"hd-world__num\">8</span>\n          <span class=\"hd-world__label\">Countries</span>\n        </div>\n        <div class=\"hd-world__stat\">\n          <span class=\"hd-world__num\">50+</span>\n          <span class=\"hd-world__label\">Regions</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n  .hd-world {\n    padding: 22px 0 28px;\n    color: #fff;\n    overflow: hidden;\n  }\n\n  .hd-world__inner {\n    max-width: 920px;\n    margin: 0 auto;\n    padding: 0 14px;\n    text-align: center;\n  }\n\n  .hd-world__heading {\n    margin: 0 0 8px;\n    text-transform: uppercase;\n    font-size: clamp(34px, 4.9vw, 54px);\n    line-height: .9;\n    font-weight: 950;\n    letter-spacing: .04em;\n    color: #fff;\n  }\n\n  .hd-world__sub {\n    margin: 0 0 16px;\n    text-transform: uppercase;\n    letter-spacing: .18em;\n    font-size: 9px;\n    font-weight: 800;\n    color: rgba(255,255,255,.54);\n  }\n\n  .hd-world__panel {\n    overflow: hidden;\n    border: 1px solid rgba(255,255,255,.13);\n    border-radius: 18px;\n    background:\n      radial-gradient(circle at 50% 38%, rgba(255,255,255,.12), transparent 36%),\n      linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.012)),\n      rgba(0,0,0,.42);\n    box-shadow:\n      0 20px 60px rgba(0,0,0,.44),\n      inset 0 1px 0 rgba(255,255,255,.08);\n  }\n\n  .hd-world__map-wrap {\n    position: relative;\n    height: 365px;\n    overflow: hidden;\n  }\n\n  .hd-world__map {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 365px;\n    filter: grayscale(1) contrast(1.14);\n  }\n\n  .hd-routes {\n    position: absolute;\n    inset: 0;\n    z-index: 3;\n    width: 100%;\n    height: 100%;\n    pointer-events: none;\n    opacity: .74;\n  }\n\n  .hd-route {\n    fill: none;\n    stroke: rgba(255,255,255,.22);\n    stroke-width: 1;\n    stroke-dasharray: 6 9;\n    animation: hdDash 8s linear infinite;\n  }\n\n  .hd-route--two {\n    animation-duration: 9s;\n  }\n\n  .hd-route--three {\n    animation-duration: 10s;\n  }\n\n  .hd-route--four {\n    animation-duration: 7s;\n  }\n\n  .hd-box {\n    position: absolute;\n    z-index: 4;\n    left: 22.5%;\n    top: 49%;\n    display: flex;\n    align-items: center;\n    gap: 4px;\n    padding: 4px 7px 4px 5px;\n    border: 1px solid rgba(255,255,255,.22);\n    border-radius: 999px;\n    background: rgba(5,5,5,.72);\n    backdrop-filter: blur(7px);\n    box-shadow:\n      0 0 18px rgba(255,255,255,.13),\n      inset 0 1px 0 rgba(255,255,255,.12);\n    opacity: 0;\n    pointer-events: none;\n    white-space: nowrap;\n  }\n\n  .hd-box__emoji {\n    display: block;\n    font-size: 17px;\n    line-height: 1;\n    filter: grayscale(1) contrast(1.25) drop-shadow(0 0 7px rgba(255,255,255,.18));\n  }\n\n  .hd-box__label {\n    display: block;\n    color: #fff;\n    font-size: 7px;\n    font-weight: 950;\n    letter-spacing: .09em;\n  }\n\n  .hd-box--one {\n    animation: hdBoxOne 7.8s ease-in-out infinite;\n  }\n\n  .hd-box--two {\n    animation: hdBoxTwo 9s ease-in-out infinite;\n    animation-delay: 1.4s;\n  }\n\n  .hd-box--three {\n    animation: hdBoxThree 10s ease-in-out infinite;\n    animation-delay: 2.6s;\n  }\n\n  .hd-box--four {\n    animation: hdBoxFour 7.2s ease-in-out infinite;\n    animation-delay: .7s;\n  }\n\n  .hd-geo-card {\n    position: absolute;\n    z-index: 5;\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    min-width: 118px;\n    padding: 8px 10px;\n    border: 1px solid rgba(255,255,255,.18);\n    border-radius: 12px;\n    background: rgba(5,5,5,.74);\n    backdrop-filter: blur(8px);\n    box-shadow:\n      0 12px 28px rgba(0,0,0,.45),\n      inset 0 1px 0 rgba(255,255,255,.08);\n    color: #fff;\n    text-align: left;\n    opacity: 0;\n    transform: translateY(8px) scale(.94);\n    animation: hdGeoPop 16s infinite;\n    pointer-events: none;\n  }\n\n  .hd-geo-card:after {\n    content: \"\";\n    position: absolute;\n    left: 16px;\n    bottom: -5px;\n    width: 9px;\n    height: 9px;\n    background: rgba(5,5,5,.74);\n    border-right: 1px solid rgba(255,255,255,.14);\n    border-bottom: 1px solid rgba(255,255,255,.14);\n    transform: rotate(45deg);\n  }\n\n  .hd-flag {\n    display: grid;\n    place-items: center;\n    width: 28px;\n    height: 28px;\n    border-radius: 999px;\n    background: rgba(255,255,255,.08);\n    font-size: 16px;\n    line-height: 1;\n  }\n\n  .hd-geo-card strong {\n    display: block;\n    font-size: 10px;\n    font-weight: 900;\n    line-height: 1.05;\n    letter-spacing: .04em;\n    text-transform: uppercase;\n  }\n\n  .hd-geo-card--us {\n    left: 23%;\n    top: 32%;\n    animation-delay: 0s;\n  }\n\n  .hd-geo-card--mx {\n    left: 23%;\n    top: 51%;\n    animation-delay: 2s;\n  }\n\n  .hd-geo-card--uk {\n    left: 46%;\n    top: 25%;\n    animation-delay: 4s;\n  }\n\n  .hd-geo-card--jp {\n    right: 13%;\n    top: 34%;\n    animation-delay: 6s;\n  }\n\n  .hd-geo-card--ca {\n    left: 21%;\n    top: 17%;\n    animation-delay: 8s;\n  }\n\n  .hd-geo-card--sg {\n    right: 20%;\n    top: 55%;\n    animation-delay: 10s;\n  }\n\n  .hd-geo-card--ae {\n    right: 31%;\n    top: 47%;\n    animation-delay: 12s;\n  }\n\n  .hd-geo-card--au {\n    right: 12%;\n    bottom: 18%;\n    animation-delay: 14s;\n  }\n\n  .hd-world__stats {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    padding: 14px 10px;\n    border-top: 1px solid rgba(255,255,255,.1);\n    background: rgba(0,0,0,.32);\n  }\n\n  .hd-world__stat {\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n  }\n\n  .hd-world__num {\n    color: #fff;\n    font-size: clamp(22px, 3vw, 32px);\n    font-weight: 950;\n    line-height: 1;\n  }\n\n  .hd-world__label {\n    text-transform: uppercase;\n    letter-spacing: .15em;\n    font-size: 8px;\n    font-weight: 800;\n    color: rgba(255,255,255,.5);\n  }\n\n  @keyframes hdDash {\n    from {\n      stroke-dashoffset: 48;\n    }\n\n    to {\n      stroke-dashoffset: 0;\n    }\n  }\n\n  @keyframes hdGeoPop {\n    0% {\n      opacity: 0;\n      transform: translateY(8px) scale(.94);\n    }\n\n    5% {\n      opacity: 1;\n      transform: translateY(0) scale(1);\n    }\n\n    13% {\n      opacity: 1;\n      transform: translateY(0) scale(1);\n    }\n\n    18% {\n      opacity: 0;\n      transform: translateY(-6px) scale(.96);\n    }\n\n    100% {\n      opacity: 0;\n      transform: translateY(-6px) scale(.96);\n    }\n  }\n\n  @keyframes hdBoxOne {\n    0% {\n      transform: translate(0,0) scale(.72) rotate(-8deg);\n      opacity: 0;\n    }\n\n    10% {\n      opacity: .95;\n    }\n\n    84% {\n      opacity: .95;\n    }\n\n    100% {\n      transform: translate(395px,-92px) scale(.98) rotate(-3deg);\n      opacity: 0;\n    }\n  }\n\n  @keyframes hdBoxTwo {\n    0% {\n      transform: translate(0,0) scale(.72) rotate(2deg);\n      opacity: 0;\n    }\n\n    10% {\n      opacity: .95;\n    }\n\n    84% {\n      opacity: .95;\n    }\n\n    100% {\n      transform: translate(540px,4px) scale(.98) rotate(4deg);\n      opacity: 0;\n    }\n  }\n\n  @keyframes hdBoxThree {\n    0% {\n      transform: translate(0,0) scale(.72) rotate(10deg);\n      opacity: 0;\n    }\n\n    10% {\n      opacity: .95;\n    }\n\n    84% {\n      opacity: .95;\n    }\n\n    100% {\n      transform: translate(555px,116px) scale(.98) rotate(12deg);\n      opacity: 0;\n    }\n  }\n\n  @keyframes hdBoxFour {\n    0% {\n      transform: translate(0,0) scale(.72) rotate(10deg);\n      opacity: 0;\n    }\n\n    10% {\n      opacity: .95;\n    }\n\n    84% {\n      opacity: .95;\n    }\n\n    100% {\n      transform: translate(160px,76px) scale(.98) rotate(12deg);\n      opacity: 0;\n    }\n  }\n\n  @media(max-width:640px) {\n    .hd-world {\n      padding: 20px 0 26px;\n    }\n\n    .hd-world__inner {\n      padding: 0 10px;\n    }\n\n    .hd-world__heading {\n      font-size: 31px;\n    }\n\n    .hd-world__map-wrap,\n    .hd-world__map {\n      height: 310px;\n    }\n\n    .hd-box {\n      left: 21%;\n      top: 49%;\n      padding: 3px 6px 3px 4px;\n      gap: 3px;\n    }\n\n    .hd-box__emoji {\n      font-size: 15px;\n    }\n\n    .hd-box__label {\n      font-size: 6px;\n    }\n\n    .hd-geo-card {\n      min-width: 98px;\n      padding: 7px 8px;\n      gap: 6px;\n      border-radius: 10px;\n    }\n\n    .hd-flag {\n      width: 24px;\n      height: 24px;\n      font-size: 14px;\n    }\n\n    .hd-geo-card strong {\n      font-size: 8px;\n    }\n\n    .hd-geo-card--us {\n      left: 18%;\n      top: 34%;\n    }\n\n    .hd-geo-card--mx {\n      left: 19%;\n      top: 52%;\n    }\n\n    .hd-geo-card--uk {\n      left: 43%;\n      top: 27%;\n    }\n\n    .hd-geo-card--jp {\n      right: 5%;\n      top: 36%;\n    }\n\n    .hd-geo-card--ca {\n      left: 15%;\n      top: 19%;\n    }\n\n    .hd-geo-card--sg {\n      right: 10%;\n      top: 56%;\n    }\n\n    .hd-geo-card--ae {\n      right: 23%;\n      top: 48%;\n    }\n\n    .hd-geo-card--au {\n      right: 5%;\n      bottom: 18%;\n    }\n\n    .hd-world__stats {\n      padding: 12px 5px;\n    }\n\n    .hd-world__label {\n      font-size: 7px;\n    }\n\n    @keyframes hdBoxOne {\n      0% {\n        transform: translate(0,0) scale(.72) rotate(-8deg);\n        opacity: 0;\n      }\n\n      10% {\n        opacity: .95;\n      }\n\n      84% {\n        opacity: .95;\n      }\n\n      100% {\n        transform: translate(195px,-68px) scale(.98) rotate(-3deg);\n        opacity: 0;\n      }\n    }\n\n    @keyframes hdBoxTwo {\n      0% {\n        transform: translate(0,0) scale(.72) rotate(2deg);\n        opacity: 0;\n      }\n\n      10% {\n        opacity: .95;\n      }\n\n      84% {\n        opacity: .95;\n      }\n\n      100% {\n        transform: translate(250px,4px) scale(.98) rotate(4deg);\n        opacity: 0;\n      }\n    }\n\n    @keyframes hdBoxThree {\n      0% {\n        transform: translate(0,0) scale(.72) rotate(10deg);\n        opacity: 0;\n      }\n\n      10% {\n        opacity: .95;\n      }\n\n      84% {\n        opacity: .95;\n      }\n\n      100% {\n        transform: translate(255px,78px) scale(.98) rotate(12deg);\n        opacity: 0;\n      }\n    }\n\n    @keyframes hdBoxFour {\n      0% {\n        transform: translate(0,0) scale(.72) rotate(10deg);\n        opacity: 0;\n      }\n\n      10% {\n        opacity: .95;\n      }\n\n      84% {\n        opacity: .95;\n      }\n\n      100% {\n        transform: translate(95px,48px) scale(.98) rotate(12deg);\n        opacity: 0;\n      }\n    }\n  }\n</style>\n\n<script>\n(function(){\n  var geos = [\n    {name:\"California\",latitude:36.7783,longitude:-119.4179},\n    {name:\"New York\",latitude:43.0000,longitude:-75.0000},\n    {name:\"New Jersey\",latitude:40.0583,longitude:-74.4057},\n    {name:\"Texas\",latitude:31.0000,longitude:-100.0000},\n    {name:\"Florida\",latitude:27.6648,longitude:-81.5158},\n    {name:\"Georgia\",latitude:32.1656,longitude:-82.9001},\n    {name:\"Maryland\",latitude:39.0458,longitude:-76.6413},\n    {name:\"Virginia\",latitude:37.4316,longitude:-78.6569},\n    {name:\"Arizona\",latitude:34.0489,longitude:-111.0937},\n    {name:\"Massachusetts\",latitude:42.4072,longitude:-71.3824},\n    {name:\"Nevada\",latitude:38.8026,longitude:-116.4194},\n    {name:\"North Carolina\",latitude:35.7596,longitude:-79.0193},\n    {name:\"Pennsylvania\",latitude:41.2033,longitude:-77.1945},\n    {name:\"Illinois\",latitude:40.6331,longitude:-89.3985},\n    {name:\"Connecticut\",latitude:41.6032,longitude:-73.0877},\n    {name:\"Ohio\",latitude:40.4173,longitude:-82.9071},\n    {name:\"Michigan\",latitude:44.3148,longitude:-85.6024},\n    {name:\"Tennessee\",latitude:35.5175,longitude:-86.5804},\n    {name:\"Colorado\",latitude:39.5501,longitude:-105.7821},\n    {name:\"Oregon\",latitude:43.8041,longitude:-120.5542},\n    {name:\"Washington\",latitude:47.7511,longitude:-120.7401},\n    {name:\"Washington DC\",latitude:38.9072,longitude:-77.0369},\n    {name:\"Puerto Rico\",latitude:18.2208,longitude:-66.5901},\n    {name:\"Mexico\",latitude:23.6345,longitude:-102.5528},\n    {name:\"United Kingdom\",latitude:55.3781,longitude:-3.4360},\n    {name:\"Japan\",latitude:36.2048,longitude:138.2529},\n    {name:\"Canada\",latitude:56.1304,longitude:-106.3468},\n    {name:\"Singapore\",latitude:1.3521,longitude:103.8198},\n    {name:\"United Arab Emirates\",latitude:23.4241,longitude:53.8478},\n    {name:\"Australia\",latitude:-25.2744,longitude:133.7751}\n  ];\n\n  function load(src, cb){\n    if(document.querySelector('script[src=\"' + src + '\"]')) return cb();\n    var s = document.createElement(\"script\");\n    s.src = src;\n    s.onload = cb;\n    document.head.appendChild(s);\n  }\n\n  function init(){\n    if(!window.am5 || !window.am5map || !window.am5geodata_worldLow || !document.getElementById(\"hd-map\")){\n      setTimeout(init,150);\n      return;\n    }\n\n    am5.ready(function(){\n      var old = am5.registry.rootElements.find(function(r){\n        return r.dom && r.dom.id === \"hd-map\";\n      });\n      if(old) old.dispose();\n\n      var root = am5.Root.new(\"hd-map\");\n      root._logo && root._logo.dispose();\n\n      var chart = root.container.children.push(am5map.MapChart.new(root,{\n        projection: am5map.geoNaturalEarth1(),\n        panX:\"none\",\n        panY:\"none\",\n        wheelY:\"none\",\n        maxZoomLevel:1\n      }));\n\n      var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root,{\n        geoJSON:am5geodata_worldLow,\n        exclude:[\"AQ\"]\n      }));\n\n      polygonSeries.mapPolygons.template.setAll({\n        fill:am5.color(0x090909),\n        stroke:am5.color(0x2b2b2b),\n        strokeWidth:.42,\n        tooltipText:\"\"\n      });\n\n      var activeCountries = chart.series.push(am5map.MapPolygonSeries.new(root,{\n        geoJSON:am5geodata_worldLow,\n        include:[\"US\",\"MX\",\"GB\",\"JP\",\"CA\",\"SG\",\"AE\",\"AU\"]\n      }));\n\n      activeCountries.mapPolygons.template.setAll({\n        fill:am5.color(0xffffff),\n        fillOpacity:.08,\n        stroke:am5.color(0xffffff),\n        strokeOpacity:.1,\n        strokeWidth:.5,\n        tooltipText:\"\"\n      });\n\n      var pointSeries = chart.series.push(am5map.MapPointSeries.new(root,{\n        latitudeField:\"latitude\",\n        longitudeField:\"longitude\"\n      }));\n\n      pointSeries.bullets.push(function(root, series, dataItem){\n        var name = dataItem.dataContext.name || \"\";\n        var isKey = [\"California\",\"New York\",\"Mexico\",\"United Kingdom\",\"Japan\",\"Canada\",\"Australia\"].indexOf(name) > -1;\n        var c = am5.Container.new(root,{});\n\n        c.children.push(am5.Circle.new(root,{\n          radius: isKey ? 3.4 : 2.1,\n          fill: am5.color(0xffffff),\n          fillOpacity: isKey ? .82 : .45,\n          stroke: am5.color(0x000000),\n          strokeWidth: .7,\n          tooltipText: \"{name}\"\n        }));\n\n        return am5.Bullet.new(root,{sprite:c});\n      });\n\n      pointSeries.data.setAll(geos);\n\n      chart.chartContainer.get(\"background\").setAll({\n        fill: am5.color(0x000000),\n        fillOpacity: 0\n      });\n\n      chart.appear(600,80);\n    });\n  }\n\n  load(\"https://cdn.amcharts.com/lib/5/index.js\",function(){\n    load(\"https://cdn.amcharts.com/lib/5/map.js\",function(){\n      load(\"https://cdn.amcharts.com/lib/5/geodata/worldLow.js\",init);\n    });\n  });\n\n  document.addEventListener(\"shopify:section:load\",function(){\n    setTimeout(init,300);\n  });\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "sticky_atc": {
+      "type": "sticky-atc",
+      "settings": {
+        "button_label": "Add to cart",
+        "show_one_size": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1776903523a2ae804f",
+    "custom_liquid_QFfReE",
+    "custom_liquid_eR7bjQ",
+    "more_from_drop_bKXAMR",
+    "custom_liquid_c764na",
+    "custom_liquid_J3cH4D",
+    "multicolumn_HDHTGi",
+    "collapsible_content_m49WYT",
+    "related-products",
+    "custom_liquid_8ghhyV",
+    "sticky_atc"
+  ]
+}
